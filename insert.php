@@ -5,10 +5,10 @@ if (isset($_POST['submit']))
 	
 $title=$_POST['title'];
 
-
+$userid=$_POST['userid'];
 $con=mysqli_connect('localhost','root','','blogposts');
 
-$qry="INSERT INTO `blogs`(  `title`) VALUES ('$title')";
+$qry="INSERT INTO `blogs`( `user_id`, `title`) VALUES ('$userid','$title')";
 $s1=mysqli_query($con,$qry);
 if ($s1)
 {
